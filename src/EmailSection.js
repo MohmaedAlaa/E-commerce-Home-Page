@@ -8,7 +8,7 @@ const EmailSection = () => {
         <div className='email-section' id='email-section'>
             <div className='email-section-container'>
                 <div className='input-area'>
-                    <h1>join Our Newsletter</h1>
+                    <h1>Join Our Newsletter</h1>
                     <p>Subscribe today for free and we will send tips on how to live sustainably.</p>
 
                     <div className="inputWithIcon">

@@ -34,7 +34,6 @@ const OurCharitiesSection = ({ourCharitiesData,items}) => {
     return(  
         
     <div className='OurCharities-section'>
-      <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {ourCharitiesData.data?ourCharitiesData.data.map((ourCharity)=>(
       <div className='best-seller-card-section'>
       <OurCharities
@@ -42,10 +41,7 @@ const OurCharitiesSection = ({ourCharitiesData,items}) => {
       >
       </OurCharities>
       </div>
-      )):"loading"}  
-      </ScrollMenu>
-        
-    
+      )):"loading"}          
     </div>      
   )      
 }

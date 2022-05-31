@@ -1,15 +1,24 @@
+/* urbanist-regular - latin */
+@font-face {
+  font-family: 'Urbanist';
+  /* font-weight: 500; */
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/Urbanist/Urbanist-VariableFont_wght.ttf'); 
+}
 *{
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Urbanist', sans-serif;
 }
 html, body, .root {
   height: 100%;
   width: 100%;
 }
 
-/* body {
+body {
   line-height: 1.5;
-} */
+}
 
 /* body, .app {
   background: white;
@@ -197,14 +206,9 @@ display:inline-block !important;
   outline: none;
   border: none;
 }
-.search-input:focus+ection{
-  border-color: #3D897A;
-} */
-.search-section-header{
+.search-section-dropdown .search-section-header{
   color: gray;
-  padding-left: 1.5em;
-  padding-bottom: -10em;
-
+  padding-left: 1.5em ;
 }
 .sustainability-ranking{
   font-size: 1.1em;
@@ -415,6 +419,7 @@ hr{
   margin: 3em 1em 1em 5.5em;
   display: flex;
   flex-direction: row;
+  font-weight: 900 !important;
 }
 .section-header h1{
   font-size: 2.6em;
@@ -1285,16 +1290,6 @@ label img {
 }
 
 
-
-
-.App {
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
                                                           /* responsive */
                                                             /* for FHD */
 @media (min-width: 1550px){
@@ -1338,7 +1333,7 @@ label img {
   .second-sales-Section h1{
     width: 4em;
   }
-  .search-section-dropdown,.btn-search{
+  .btn-search{
     height: 3.5vw;
     padding: 0;
   }
