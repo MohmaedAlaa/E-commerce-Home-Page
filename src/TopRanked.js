@@ -28,7 +28,7 @@ class TopRanked extends Component {
                             <div className='sidenav-container'>
                                 <div className='sidenav-first-line'>
                                     <p> <span className="checkmark"></span> Added to cart</p>
-                                    {/* <a href="#home" className="closebtn">&times;</a> */}
+                                    {/* <a href="#home" className="closebtn" >&times;</a> */}
                                 </div>
                                 <div className='sidenav-second-line'>
                                     <div>

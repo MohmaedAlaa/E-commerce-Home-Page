@@ -843,6 +843,19 @@ label img {
   padding: 1em;
   margin-bottom: 10em;
 }
+
+.react-responsive-modal-modal{
+  border-radius: 0.4em;
+}
+.react-responsive-modal-modal h2{
+color: #3D897A;
+}
+.react-responsive-modal-closeButton:hover{
+color: #3D897A;
+}
+.react-responsive-modal-closeButton:focus{
+  outline: none;
+}
                                                          /* how it works */
 .HowItWorks-container h1{
   text-align: center;

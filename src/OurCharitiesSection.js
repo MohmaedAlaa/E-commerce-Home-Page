@@ -8,27 +8,6 @@ import Carousel from 'react-elastic-carousel';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 
 
-function LeftArrow() {
-  const { isFirstItemVisible, scrollPrev } =
-    React.useContext(VisibilityContext);
-
-  return (
-    <div disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
-      Left
-    </div>
-  );
-}
-
-function RightArrow() {
-  const { isLastItemVisible, scrollNext } = React.useContext(VisibilityContext);
-
-  return (
-    <div disabled={isLastItemVisible} onClick={() => scrollNext()}>
-      Right
-    </div>
-  );
-}
-
 const OurCharitiesSection = ({ourCharitiesData,items}) => {
     
     return(  

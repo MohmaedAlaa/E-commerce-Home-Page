@@ -5,8 +5,11 @@ import {usePopup, DialogType} from "react-custom-popup";
 import Popup from 'reactjs-popup';
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
+import App from "./popup";
 
 class OurCharities extends Component {
+
+
     render (){
         const {ourCharity} = this.props;
         return (
@@ -26,9 +29,10 @@ class OurCharities extends Component {
                         <div className="OurCharities-content-details">
                             <h3 className="OurCharities-content-title">{ourCharity.name}</h3>
                             <p className="OurCharities-content-text">{ourCharity.description} </p>
-                            <Popup trigger={<button className="SeeMore">  .....See More </button>} position="left">
+                            {/* <Popup trigger={<button className="SeeMore">  .....See More </button>} position="left">
                                 <p className='SeeMore-popup'>{ourCharity.description}</p>
-                            </Popup>
+                            </Popup> */}
+                            <App ourCharityName={ourCharity.name} ourCharityDescription={ourCharity.description}></App>
                             {/* <a href='#home' className="SeeMore">e</a> */}
                         </div>
                     </div>
