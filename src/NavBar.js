@@ -1,7 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe} from '@fortawesome/free-solid-svg-icons';
 import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
+import { BsGlobe } from "react-icons/bs";
+
 const Navbar = () => {
 
     return (
@@ -13,10 +14,10 @@ const Navbar = () => {
                         <a href='/#' className='mytreetyPlus'>Mytreety <span>Plus</span></a>
                     </button>
                     <button>
-                        <a href='##' className='help'><FontAwesomeIcon icon={faCircleQuestion}></FontAwesomeIcon> Help</a>
+                        <a href='##' className='help'><FontAwesomeIcon icon={faCircleQuestion} style={{fontSize: '1.25em'}}></FontAwesomeIcon> Help</a>
                     </button>
                     <button>
-                        <a href='###' className='Deutsch'><FontAwesomeIcon icon={faGlobe}></FontAwesomeIcon> Deutsch</a>
+                        <a href='###' className='Deutsch'><BsGlobe style={{fontSize: '1.25em'}}></BsGlobe> Deutsch</a>
                     </button>
                 </div>
             </div>

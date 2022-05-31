@@ -35,17 +35,17 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+# build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
-
+HomePageAPJ.js
 # TypeScript v1 declaration files
 typings/
 
 # TypeScript cache
-*.tsbuildinfo
+# *.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -149,7 +149,7 @@ dist
 # *.ipr
 
 # CMake
-cmake-build-*/
+# cmake-build-*/
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
@@ -172,11 +172,11 @@ atlassian-ide-plugin.xml
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
-crashlytics-build.properties
+# crashlytics-build.properties
 fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
-.idea/caches/build_file_checksums.ser
+# .idea/caches/build_file_checksums.ser

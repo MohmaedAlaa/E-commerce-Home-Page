@@ -5,6 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping , faChevronDown ,faClockRotateLeft ,faMagnifyingGlass ,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const SearchSection = ({query,searchedProductsFn}) => {
 
@@ -22,7 +23,15 @@ const SearchSection = ({query,searchedProductsFn}) => {
             <img src={require('./Imgs/b@2x.png')} alt='b'></img>
                 <div>
                     {/* catch the query and pass it to the searchedBooksFn to search for the books by it */}
-                    <div className="search-bar">
+                    <div className="search-inputWithIcon">
+                        <input type="text" id="text" name="text" 
+                        placeholder='Search all products or categories' 
+                        value={query}
+                        onChange={(event) => searchedProductsFn(event.target.value)}
+                        ></input>
+                        <FontAwesomeIcon className='email-icon' icon={faMagnifyingGlass}/>
+                    </div>
+                    {/* <div className="search-bar">
                         <input type="text"
                         placeholder=" Search all products or categories" 
                         className="search-input"
@@ -30,7 +39,7 @@ const SearchSection = ({query,searchedProductsFn}) => {
                         onChange={(event) => searchedProductsFn(event.target.value)}
                         />
                         <FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass}/>
-                    </div>
+                    </div> */}
     
                     {
                         query.length?
@@ -73,9 +82,10 @@ const SearchSection = ({query,searchedProductsFn}) => {
                     }
                                  
                 </div>
-                <div>
+                <div >
                 <DropdownButton
                     title=" All "
+                    className='search-section-dropdown'
                     // onSelect={handleSelectColor}
                 >
                     <p className='search-section-header'>All</p>
@@ -94,9 +104,11 @@ const SearchSection = ({query,searchedProductsFn}) => {
                 </DropdownButton>
                 </div>       
                 <button type="button" className="btn-search">Search</button>  
-                <FontAwesomeIcon className='shopping-icon' icon={faCartShopping}/>
-                <FontAwesomeIcon className='favorite-icon' icon={faHeart}/>  
-                <FontAwesomeIcon className='profile-icon' icon={faUser}/>    
+                <div className='search-section-icons'>
+                    <MdOutlineShoppingCart className="shopping-icon"></MdOutlineShoppingCart>
+                    <FontAwesomeIcon className='favorite-icon' icon={faHeart}/>  
+                    <FontAwesomeIcon className='profile-icon' icon={faUser}/>  
+                </div>  
                 <hr></hr>
             </div>
             <div className='hover-section'>
