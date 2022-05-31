@@ -14,10 +14,10 @@ const Navbar = () => {
                         <a href='/#' className='mytreetyPlus'>Mytreety <span>Plus</span></a>
                     </button>
                     <button>
-                        <a href='##' className='help'><FontAwesomeIcon icon={faCircleQuestion} style={{fontSize: '1.25em'}}></FontAwesomeIcon> Help</a>
+                        <a href='##' className='help'><img src={require('./icons/Icon - help.svg')} alt='Icon - help'></img> Help</a>
                     </button>
                     <button>
-                        <a href='###' className='Deutsch'><BsGlobe style={{fontSize: '1.25em'}}></BsGlobe> Deutsch</a>
+                        <a href='###' className='Deutsch'><img src={require('./icons/Icon - language.svg')} alt='Icon - language'></img> Deutsch</a>
                     </button>
                 </div>
             </div>

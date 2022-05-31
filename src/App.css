@@ -273,14 +273,16 @@ display:inline-block !important;
 .btn-search:focus{
   outline: none;
 }
+.search-section-icons{
+  margin-left: 4em;
+}
+.search-section-icons img{
+  width: 8.5%;
+  margin: 1vw 0.75vw;
+}
 .shopping-icon{
-  font-size: 1.25em;
-  margin: 0 0.7em 1.75em 4em;
+  width: 9% !important;
 }
-.favorite-icon,.profile-icon{
-  margin: 2em 1em 1em 1em;
-}
-
 hr{
   width:85em;
   text-align:center;
@@ -366,7 +368,7 @@ hr{
 }
 .first-sales-Section{
   margin: 2em 1em 1em 5.5em;
-  background-image: url('./Imgs/Image - Banner 1@2x.png');
+  background-image: url('./Imgs/Image\ -\ Banner\ 1@2x.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -850,7 +852,7 @@ label img {
 }
 .HowItWorks {
   margin: 3vw 7vw 0 7vw;
-  background-image: url('./Imgs/vector\ -\ steps@2x.png');
+  background-image: url('./icons//vector\ -\ steps.svg');
   height: 80em;
   width: 70em;
   background-position:right;
@@ -869,13 +871,13 @@ label img {
   margin: 3em 0 0 3em;
 }
 .HowItWorks-all-one img:nth-child(2){
-  margin: 6em 0 0 1em;
+  margin: 5em 0 0 1em;
 }
 .HowItWorks-all-two{
   margin: 5em 0 0 8em;
 }
 .HowItWorks-all-two img:nth-child(2){
-  margin: 5.5em 0 0 1em;
+  margin: 4.5em 0 0 1em;
 }
 .HowItWorks-all-three{
   margin: 15em 0 0 4em;
@@ -1311,7 +1313,7 @@ label img {
     margin: 1.15vw 0vw 1vw 2vw ;
   }
   .search-section-icons{
-    margin-left: -0.75vw;
+    margin-left: 4.5vw;
   }
   .search-inputWithIcon input[type="text"] {
     height: 3.15vw !important;
@@ -1327,7 +1329,7 @@ label img {
     width: 1500;
   }
   .navBottons{
-    margin: .6vw 1vw 1vw 32vw;
+    margin: .6vw 1vw 1vw 31vw;
   }
   
   .first-sales-Section h1{
@@ -1354,6 +1356,7 @@ label img {
   }
   .search-section-icons{
     margin-top: .5vw;
+    margin-left: 5vw;
   }
 }           
 
@@ -1399,13 +1402,7 @@ label img {
     margin-left: 27vw;
     margin-bottom: 5vw;
   }
-  .shopping-icon{
-    font-size: 20px;
-    margin-left: 0;
-  }
-  .profile-icon,.favorite-icon{
-    font-size: 16px;
-  }
+
   .sales-Section{
     flex-direction: column;
     margin: 0;

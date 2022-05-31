@@ -11,7 +11,7 @@ const HowItWorks = () => {
                 <div className='HowItWorks-line-one'>
                     <div className='HowItWorks-all-one'>
                         <div>
-                            <img src={require('./Imgs/Vector - dummy 1@2x.png')} alt='Vector - dummy'></img>
+                            <img src={require('./icons/vector - dummy 2.svg')} alt='b'></img>
                         </div>
                         <div className='HowItWorks-row'>
                             <div className='HowItWorks-content'>
@@ -19,12 +19,12 @@ const HowItWorks = () => {
                                 <h4>Explore</h4>
                                 <p>Shop for your favorite products and see their environmental impact via the Mytreety Sustainability Ranking.</p>
                             </div>
-                            <img src={require('./Imgs/vector - footsteps@2x.png')} alt='Vector - footsteps'></img>
+                            <img src={require('./icons/vector - footsteps.svg')} alt='Vector - footsteps'></img>
                         </div>
                     </div>
                     <div className='HowItWorks-all-five'>
                         <div>
-                            <img src={require('./Imgs/Vector - dummy 1@2x.png')} alt='Vector - dummy'></img>
+                            <img src={require('./icons/vector - dummy 2.svg')} alt='b'></img>
                         </div>
                         <div className='HowItWorks-row'>
                             <div className='HowItWorks-content'>
@@ -38,7 +38,7 @@ const HowItWorks = () => {
                 <div className='HowItWorks-line-two'>
                     <div className='HowItWorks-all-two'>
                         <div>
-                            <img src={require('./Imgs/Vector - dummy 1@2x.png')} alt='Vector - dummy'></img>
+                            <img src={require('./icons/vector - dummy 2.svg')} alt='b'></img>
                         </div>
                         <div className='HowItWorks-row'>
                             <div className='HowItWorks-content'>
@@ -46,12 +46,12 @@ const HowItWorks = () => {
                                 <h4>Recognize</h4>
                                 <p>Understand how a product protects the environment via the Mytreety Sustainability Icons.</p>
                             </div>
-                            <img src={require('./Imgs/vector - footsteps@2x.png')} alt='Vector - footsteps'></img>
+                            <img src={require('./icons/vector - footsteps.svg')} alt='Vector - footsteps'></img>
                         </div>
                     </div>
                     <div className='HowItWorks-all-four'>
                         <div>
-                            <img src={require('./Imgs/Vector - dummy 1@2x.png')} alt='Vector - dummy'></img>
+                            <img src={require('./icons/vector - dummy 2.svg')} alt='b'></img>
                         </div>
                         <div className='HowItWorks-row'> 
                             <div className='HowItWorks-content'>
@@ -66,7 +66,7 @@ const HowItWorks = () => {
                 <div className='HowItWorks-line-three'>
                     <div className='HowItWorks-all-three'>
                         <div>
-                            <img src={require('./Imgs/Vector - dummy 1@2x.png')} alt='Vector - dummy'></img>
+                            <img src={require('./icons/vector - dummy 2.svg')} alt='b'></img>
                         </div>
                         <div className='HowItWorks-row'>
                             <div className='HowItWorks-content'>

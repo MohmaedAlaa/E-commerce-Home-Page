@@ -20,7 +20,7 @@ const SearchSection = ({query,searchedProductsFn}) => {
             {query.length?<div className='fake-size-search-menu'></div>:''}
 
             <div className='search-section'>
-            <img src={require('./Imgs/b@2x.png')} alt='b'></img>
+            <img src={require('./Imgs/b.svg')} alt='b'></img>
                 <div>
                     {/* catch the query and pass it to the searchedBooksFn to search for the books by it */}
                     <div className="search-inputWithIcon">
@@ -105,9 +105,9 @@ const SearchSection = ({query,searchedProductsFn}) => {
                 </div>       
                 <button type="button" className="btn-search">Search</button>  
                 <div className='search-section-icons'>
-                    <MdOutlineShoppingCart className="shopping-icon"></MdOutlineShoppingCart>
-                    <FontAwesomeIcon className='favorite-icon' icon={faHeart}/>  
-                    <FontAwesomeIcon className='profile-icon' icon={faUser}/>  
+                <img src={require('./icons/Icon - cart.svg')} className="shopping-icon" alt='b'></img>
+                <img src={require('./icons/Icon - wishlist.svg')} className='favorite-icon' alt='b'></img>
+                <img src={require('./icons/Icon - Account.svg')} className='profile-icon' alt='b'></img>
                 </div>  
                 <hr></hr>
             </div>

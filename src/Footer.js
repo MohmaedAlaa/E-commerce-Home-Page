@@ -9,7 +9,7 @@ const Footer = () => {
             <div className='footer-section-container'>
                 <div className='footer-section-top'>
                     <div className='footer-section-top-one'>
-                        <img src={require('./Imgs/b@2x.png')} alt='b'></img>
+                        <img src={require('./Imgs/b.svg')} alt='b'></img>
                         <p>All prices include VAT.</p>
                         <p>Follow us on</p>
                         <div className='social-icons'>
