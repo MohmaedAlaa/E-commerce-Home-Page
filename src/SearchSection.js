@@ -4,8 +4,6 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping , faChevronDown ,faClockRotateLeft ,faMagnifyingGlass ,faAngleRight} from '@fortawesome/free-solid-svg-icons';
-import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
-import { MdOutlineShoppingCart } from "react-icons/md";
 
 const SearchSection = ({query,searchedProductsFn}) => {
 
@@ -265,9 +263,9 @@ const SearchSection = ({query,searchedProductsFn}) => {
                     <div className="dropdown-content">
                             <div className='contant-rows'>
                                 <div>
-                                    <p>Sustainability Ranking</p>
+                                    <p className='sustainability-header'>Sustainability Ranking</p>
                                     <div className='content-first-line'>
-                                    <div>
+                                    <div className='contant-rows'>
                                         <div>
                                             <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='b'></img>
                                         </div>
@@ -276,7 +274,7 @@ const SearchSection = ({query,searchedProductsFn}) => {
                                             <p>1-3 Sustainability icons</p>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className='contant-rows'>
                                         <div>
                                             <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='b'></img>
                                         </div>
@@ -285,7 +283,7 @@ const SearchSection = ({query,searchedProductsFn}) => {
                                             <p>4-5 Sustainability icons</p>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className='contant-rows'>
                                         <div>
                                             <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='b'></img>
                                         </div>
@@ -296,23 +294,69 @@ const SearchSection = ({query,searchedProductsFn}) => {
                                     </div>
                                     </div>
                                 </div>
+                                <div className='vl'></div>
                                 <div className='content-second-line'>
                                     <div>
-                                    <p>Sustainability Icons</p>
-                                    <a href='#home'>Tops</a>
-                                    <a href='#home'>Khitwear</a>
-                                    <a href='#home'>Coats & Jakets</a>
-                                    <a href='#home'>Dresses</a>
-                                    <a href='#home'>Skirts</a>
-                                    </div>
-                                    <div className='vl'></div>
-                                    <div>
-                                    <p>Men</p>
-                                    <a href='#home'>Tops</a>
-                                    <a href='#home'>Khitwear</a>
-                                    <a href='#home'>Coats & Jakets</a>
-                                    <a href='#home'>Dresses</a>
-                                    <a href='#home'>Skirts</a>
+                                        <p className='sustainability-header'>Sustainability Icons</p>
+                                        <div className='sustainability-icons'>
+                                            <div  className='contant-rows'>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Vegan</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Women owned</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>100% Organic</p>
+                                                </div>
+                                            </div>
+                                            <div className='contant-rows'>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>100% Natural</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Biodegradable</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled content</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled content</p>
+                                                </div>
+                                            </div>
+                                            <div className='contant-rows'>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled content</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled content</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled content</p>
+                                                </div>
+                                                <div>
+                                                <img src={require('./Imgs/Compostable@2x.png')} alt='b'></img>
+                                                <p>Recycled content</p>
+                                                </div>
+                                            </div>         
+                                        </div>
+                                        <div className='section-header'>
+                                            <a href='#home'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -169,7 +169,7 @@ display:inline-block !important;
   margin-left: 2.1em;
   margin-top: -0.5em;
   border-radius: 0.4em;
-  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 3px 5px 20px #9A9A9A29;
   border-top: none;
   z-index: 1;
   width: 46.9em;
@@ -282,13 +282,13 @@ display:inline-block !important;
   border: 0.05em solid lightgray;
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 0%);
+  box-shadow: 3px 5px 20px #9A9A9A29;
 }
 .btn-primary.focus, .btn-primary:focus {
   color: black;
   background-color: white;
   border: 0.05em solid lightgray;
-  box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 0%);
+  box-shadow: 3px 5px 20px #9A9A9A29;
 }
 .dropdown-menu{
   margin-right: 15em;
@@ -367,7 +367,7 @@ hr{
   position: absolute;
   background-color: white;
   text-align: left;
-  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 3px 5px 20px #9A9A9A29;
   padding: 1em;
   z-index: 1;
   border-radius: 0.5em;
@@ -404,22 +404,35 @@ hr{
 }
 .search-section-background{
   background-color: white;
-  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.04);
+  box-shadow: 3px 5px 20px #9A9A9A29;
 }
 .Sustainability-dropdown-content .vl{
   border-left: 0.04em solid lightgray;
-  height: 10em;
+  height: 28em;
+  margin-top: 1em;
 }
 .Sustainability-dropdown-content .content-second-line{
   display: flex;
   flex-direction: row;
 }
 .Sustainability-dropdown-content .dropdown-content{
-  width: 50em;
+  width: 55em;
   position: absolute;
+  margin-left: -40em !important;
+}
+.Sustainability-dropdown-content .dropdown-content div{
+  margin:1em 0 0 0;
+  padding: 0 1em 0 0;
+}
+.Sustainability-dropdown-content .dropdown-content .content-first-line{
+  padding: 1em;
+  width: 15em;
+  margin-top: -1em;
 }
 .Sustainability-dropdown-content .dropdown-content .content-first-line img{
   width: 1.75em;
+  margin: 0;
+  margin-right: -0.5em;
 }
 .Sustainability-dropdown-content .dropdown-content .content-first-line p:nth-child(1){
   color: #3D897A;
@@ -429,10 +442,42 @@ hr{
   color: #686868;
   font: normal normal medium 0.75em/0.875 Urbanist;
 }
-.Sustainability-dropdown-content .dropdown-content .content-first-line{
-  padding: 1em;
-  display: flex;
-  flex-direction: row;
+.Sustainability-dropdown-content .dropdown-content .content-first-line .contant-rows{
+  padding: 0.75em 0;
+  margin-left: -1em;
+}
+.sustainability-icons div{
+  margin-top: 1em ;
+  text-align: center;
+}.sustainability-icons div img{
+  width: 40%;
+  margin: -1em 0;
+}
+.sustainability-icons div p{
+  margin-top: 1.5em;
+  font: normal normal medium 0.75em/0.875em Urbanist;
+  color: #686868;
+  width: 8em;
+}
+.sustainability-header{
+  color: #232323;
+  font: normal normal medium 1em/1.1875em Urbanist;
+
+}
+.Sustainability-dropdown-content .dropdown-content .content-first-line .sustainability-header{
+  margin-bottom: -5em;
+}
+.Sustainability-dropdown-content .dropdown-content .content-second-line .sustainability-header{
+  margin-top: -1em;
+  margin-bottom: 3em;
+}
+.dropdown-content .section-header {
+  margin-top: 3em !important;
+  margin-left: -9em !important;
+  font: normal normal bold 1em/1.1875em Urbanist;
+}
+.dropdown-content .section-header span:hover{
+  color: orange;
 }
                                                          /* sales section */
 .sales-Section{
@@ -1282,7 +1327,7 @@ color: #3D897A;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
-  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 3px 5px 20px #9A9A9A29;
   height: 100%;
 }
 .sidenav-container{
