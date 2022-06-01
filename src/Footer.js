@@ -55,7 +55,7 @@ const Footer = () => {
                 <hr></hr>
                 <div className='footer-section-bottom'>
                     <p>Buyer/Seller/Charities Policies <span>.</span> Privacy Policy <span>.</span> Imprint <span>.</span> General terms and conditions</p>
-                    <p>Ⓒ2022 Mytreety Revolutionizing SustainableE-commerce</p>
+                    <p>Ⓒ2022 Mytreety Revolutionizing Sustainable E-commerce</p>
                 </div>
             </div>
         </div>

@@ -11,7 +11,9 @@ if (!token)
 const headers = {
   'App-Language': 'en',
   'Accept' : 'application/json'
-
+}
+const params = {
+  page: 2,
 }
 // get all products best seller
 export const getAllBestSeller = () =>
@@ -20,11 +22,17 @@ export const getAllBestSeller = () =>
     .then(data => data)
 
 // get all charities
-export const getAllCharities = () =>
+// page one
+export const getAllCharitiesPageOne = () =>
   fetch(`${api}/api/v2/charities`,{headers},{ mode: 'no-cors'})
     .then(res => res.json())
     .then(data => data)
-  
+// page two
+export const getAllCharitiesPageTwo = () =>
+fetch(`${api}/api/v2/charities?page=2`,{headers},{ mode: 'no-cors'})
+  .then(res => res.json())
+  .then(data => data)
+    
 export const postSubscribe = (query) =>
   fetch(`${api}/api/v2/newsletter/subscribe`, {
     method: 'POST',

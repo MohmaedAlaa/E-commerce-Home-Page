@@ -1,6 +1,7 @@
 import React, { useRef ,Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import {faHeart as faHeartFocused} from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "react-sidebar";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -31,7 +32,7 @@ class TopRanked extends Component {
                                 </div>
                                 <div className='sidenav-second-line'>
                                     <div>
-                                    <img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img>
+                                    <img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img>
                                     </div>
                                     <div className='sidenav-second-line-right'>
                                     <p>{bestSellerProduct.name}</p>
@@ -40,7 +41,7 @@ class TopRanked extends Component {
                                 </div>    
                                     <hr></hr>
                                     <div className='sidenav-third-line'>
-                                    <p> Cart sub Total <span>(1 item)</span></p>
+                                    <p> Cart sub Total &nbsp; <span> (1 item) </span> </p>
                                     <p className='price'>{bestSellerProduct.stroked_price}</p>
                                     </div>
                                     <button className='cart-button'>Cart</button>
@@ -57,11 +58,11 @@ class TopRanked extends Component {
                 <div className='card dropbtn'>
                 <p className='sale'>15% off</p>
                 <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='Icon - sustainability' className='sustainability-icon'></img>
-                    <img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img>
+                    <img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img>
                     
                     <div className='card-text-area'>
                         <div className='hover-content'>
-                        <img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img>
+                        <img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img>
                         </div>
                         <p>{bestSellerProduct.name}</p>
                         <p className='price'>{bestSellerProduct.stroked_price}</p>
@@ -72,19 +73,19 @@ class TopRanked extends Component {
                     <ul>
                         <li>
                             <input type="checkbox" id="myCheckbox1" />
-                            <label for="myCheckbox1"><img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img></label>
+                            <label for="myCheckbox1"><img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img></label>
                         </li>
                         <li>
                             <input type="checkbox" id="myCheckbox2" />
-                            <label for="myCheckbox2"><img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img></label>
+                            <label for="myCheckbox2"><img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img></label>
                         </li>
                         <li>
                             <input type="checkbox" id="myCheckbox3" />
-                            <label for="myCheckbox3"><img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img></label>
+                            <label for="myCheckbox3"><img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img></label>
                         </li>
                         <li>
                             <input type="checkbox" id="myCheckbox4" />
-                            <label for="myCheckbox4"><img src={require('./Imgs/Img - product 1@2x.png')} alt='Img - product'></img></label>
+                            <label for="myCheckbox4"><img src={`https://testing.mytreety.com/${bestSellerProduct.thumbnail_image}`} alt='Img - product'></img></label>
                         </li>
                     </ul>
 

@@ -21,6 +21,10 @@ const SearchSection = ({query,searchedProductsFn}) => {
 
             <div className='search-section'>
             <img src={require('./Imgs/b.svg')} alt='b'></img>
+            <div className='search-section-icons-mobile'>
+                <img src={require('./icons/Icon - Account.svg')} className='profile-icon-mobile' alt='b'></img>
+                <img src={require('./icons/Icon - cart.svg')} className="shopping-icon-mobile" alt='b'></img>
+            </div>
                 <div>
                     {/* catch the query and pass it to the searchedBooksFn to search for the books by it */}
                     <div className="search-inputWithIcon">
@@ -30,7 +34,7 @@ const SearchSection = ({query,searchedProductsFn}) => {
                         onChange={(event) => searchedProductsFn(event.target.value)}
                         ></input>
                         <FontAwesomeIcon className='email-icon' icon={faMagnifyingGlass}/>
-                    </div>
+                    </div>  
                     {/* <div className="search-bar">
                         <input type="text"
                         placeholder=" Search all products or categories" 
@@ -108,7 +112,7 @@ const SearchSection = ({query,searchedProductsFn}) => {
                 <img src={require('./icons/Icon - cart.svg')} className="shopping-icon" alt='b'></img>
                 <img src={require('./icons/Icon - wishlist.svg')} className='favorite-icon' alt='b'></img>
                 <img src={require('./icons/Icon - Account.svg')} className='profile-icon' alt='b'></img>
-                </div>  
+                </div> 
                 <hr></hr>
             </div>
             <div className='hover-section'>
@@ -255,18 +259,61 @@ const SearchSection = ({query,searchedProductsFn}) => {
                         </div>
                     </div>
                 </div>
-                <div className="dropdown dropdown-hover">
+                <div className="dropdown dropdown-hover Sustainability-dropdown-content">
                     <span>Sustainability criteria &nbsp;<FontAwesomeIcon icon={faChevronDown}/></span>
                     <div className='fake-size'>
-                        <div className="dropdown-content">
+                    <div className="dropdown-content">
                             <div className='contant-rows'>
-                                <div className='content-first-line'>
-                                    <p>Women</p>
+                                <div>
+                                    <p>Sustainability Ranking</p>
+                                    <div className='content-first-line'>
+                                    <div>
+                                        <div>
+                                            <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='b'></img>
+                                        </div>
+                                        <div>
+                                            <p>Good in Sustainability</p>
+                                            <p>1-3 Sustainability icons</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='b'></img>
+                                        </div>
+                                        <div>
+                                            <p>Great in Sustainability</p>
+                                            <p>4-5 Sustainability icons</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <img src={require('./Imgs/Icon - sustainability 1@2x.png')} alt='b'></img>
+                                        </div>
+                                        <div>
+                                            <p>Excellent in Sustainability</p>
+                                            <p>4-5 Sustainability icons</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div className='content-second-line'>
+                                    <div>
+                                    <p>Sustainability Icons</p>
                                     <a href='#home'>Tops</a>
                                     <a href='#home'>Khitwear</a>
                                     <a href='#home'>Coats & Jakets</a>
                                     <a href='#home'>Dresses</a>
                                     <a href='#home'>Skirts</a>
+                                    </div>
+                                    <div className='vl'></div>
+                                    <div>
+                                    <p>Men</p>
+                                    <a href='#home'>Tops</a>
+                                    <a href='#home'>Khitwear</a>
+                                    <a href='#home'>Coats & Jakets</a>
+                                    <a href='#home'>Dresses</a>
+                                    <a href='#home'>Skirts</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

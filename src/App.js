@@ -8,7 +8,6 @@ import SalesSection from './SalesSection';
 // import CookiesBar from './CookiesBar';
 import TopRanked from './TopRanked';
 import Categories from './Categories';
-import OurCharities from './OurCharities';
 import HowItWorks from './HowItWorks';
 import BestSeller from './BestSeller';
 import EmailSection from './EmailSection';
@@ -20,10 +19,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleRight,faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import TopRankedSection from './TopRankedSection';
 import OurCharitiesSection from './OurCharitiesSection';
+
 class MytreetyApp extends Component {
   state = {
     bestSellerProducts : [],
-    ourCharitiesData : [],
+    ourCharitiesDataPageOne : [],
+    ourCharitiesDataPageTwo : [],
     query : '',
     sidebarOpen: true,
       items: [
@@ -46,9 +47,14 @@ class MytreetyApp extends Component {
        bestSellerProducts
       }))
     })
-    HomePageAPI.getAllCharities().then((ourCharitiesData)=>{
+    HomePageAPI.getAllCharitiesPageOne().then((ourCharitiesDataPageOne)=>{
       this.setState(()=>({
-       ourCharitiesData
+       ourCharitiesDataPageOne
+      }))
+    })
+    HomePageAPI.getAllCharitiesPageTwo().then((ourCharitiesDataPageTwo )=>{
+      this.setState(()=>({
+       ourCharitiesDataPageTwo 
       }))
     })
   }
@@ -79,7 +85,7 @@ class MytreetyApp extends Component {
     }
   };
   render() {
-    const {query,bestSellerProducts,ourCharitiesData,items} = this.state
+    const {query,bestSellerProducts,ourCharitiesDataPageOne,ourCharitiesDataPageTwo,items} = this.state
     const {searchedProductsFn,style} = this
     return (
 
@@ -95,7 +101,7 @@ class MytreetyApp extends Component {
             <SalesSection></SalesSection>
 
             <div className="section-header">
-                <h1>Top Top Ranked Sustainable products</h1>
+                <h1>Top Ranked Sustainable products</h1>
                 <a href='#home'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
             </div>
             <TopRankedSection
@@ -106,11 +112,12 @@ class MytreetyApp extends Component {
             <Categories></Categories>
 
             <div className="section-header OurCharities-section-header">
-                <h1>Our charities</h1>
+                <h1>Our Charities</h1>
                 <a href='#home'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
             </div>
             <OurCharitiesSection
-            ourCharitiesData={ourCharitiesData}
+            ourCharitiesDataPageOne={ourCharitiesDataPageOne}
+            ourCharitiesDataPageTwo ={ourCharitiesDataPageTwo }
             items={items}
             ></OurCharitiesSection>
 
