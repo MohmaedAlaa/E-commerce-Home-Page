@@ -1,17 +1,16 @@
 import React from 'react'
 import OurCharities from './OurCharities';
 // import Carousel from 'react-elastic-carousel';
-import Item from "./Item";
 // import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css'
-import Carousel from 'react-elastic-carousel';
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
-
+import Carousel from "react-elastic-carousel";
+import Item from "./Item";
 
 const OurCharitiesSection = ({ourCharitiesData,items}) => {
     
     return(  
         
+      
     <div className='OurCharities-section'>
       {ourCharitiesData.data?ourCharitiesData.data.map((ourCharity)=>(
       <div className='best-seller-card-section'>

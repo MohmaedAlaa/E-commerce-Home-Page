@@ -4,7 +4,6 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Sidebar from "react-sidebar";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdOutlineShoppingCart } from "react-icons/md";
-
 class TopRanked extends Component {
     
     constructor(props) {

@@ -7,6 +7,7 @@ import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 import App from "./popup";
 
+
 class OurCharities extends Component {
 
 
@@ -15,12 +16,10 @@ class OurCharities extends Component {
         return (
             
             <div id='OurCharities-section'>
-    
                  {console.log(ourCharity)}
                  {/* {console.log(ourCharity.id)} */}
                  {/* {console.log(ourCharity.name)} */}
                  {console.log(ourCharity.image)}
-    
                 <div className="container-OurCharities" >
                     <div className="OurCharities-content">
                     {/* background for the content */}
