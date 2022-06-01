@@ -430,9 +430,8 @@ hr{
   margin-top: -1em;
 }
 .Sustainability-dropdown-content .dropdown-content .content-first-line img{
-  width: 1.75em;
-  margin: 0;
-  margin-right: -0.5em;
+  width: 2.5em;
+  margin: -0.5em -0.5em 0 0;
 }
 .Sustainability-dropdown-content .dropdown-content .content-first-line p:nth-child(1){
   color: #3D897A;
