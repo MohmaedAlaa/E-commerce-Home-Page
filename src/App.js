@@ -114,7 +114,7 @@ class MytreetyApp extends Component {
             items={items}
             ></OurCharitiesSection>
 
-            <HowItWorks></HowItWorks>
+            {/* <HowItWorks></HowItWorks> */}
 
             <div className="section-header BestSeller-header">
               <h1>Best Seller</h1>

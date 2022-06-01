@@ -17,7 +17,7 @@ const EmailSection = () => {
                     </div>
                     <button className="btn-search">Subscribe</button>
                 </div>
-                <div>
+                <div className='img-email-section'>
                     <img src={require('./icons/vector - dummy 2.svg')} alt='vector - dummy'></img>
                 </div>
             </div>
