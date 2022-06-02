@@ -1,10 +1,9 @@
 import React from 'react'
-// import {useState} from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping , faChevronDown ,faClockRotateLeft ,faMagnifyingGlass ,faAngleRight} from '@fortawesome/free-solid-svg-icons';
-
+import { faChevronDown ,faClockRotateLeft ,faMagnifyingGlass ,faAngleRight} from '@fortawesome/free-solid-svg-icons';
+import {MdOutlineRemoveShoppingCart} from   'react-icons/md'
 const SearchSection = ({query,searchedProductsFn}) => {
 
     // const [color,setColor]=useState('');
@@ -107,9 +106,63 @@ const SearchSection = ({query,searchedProductsFn}) => {
                 </div>       
                 <button type="button" className="btn-search">Search</button>  
                 <div className='search-section-icons'>
-                <img src={require('./icons/Icon - cart.svg')} className="shopping-icon" alt='b'></img>
+                {/* <img src={require('./icons/Icon - cart.svg')} className="shopping-icon" alt='b'></img>
                 <img src={require('./icons/Icon - wishlist.svg')} className='favorite-icon' alt='b'></img>
-                <img src={require('./icons/Icon - Account.svg')} className='profile-icon' alt='b'></img>
+                <img src={require('./icons/Icon - Account.svg')} className='profile-icon' alt='b'></img> */}
+                <div className='hover-section'>
+                    <div className="dropdown dropdown-hover dropdown-hover-shopping-icon">
+                            <span><img src={require('./icons/Icon - cart.svg')} className="shopping-icon" alt='b'></img></span>
+                            <div className='fake-size-drop-menu'>
+                                <div className="dropdown-content">
+                                    <div className='contant-rows'>
+                                        <div className='shopping-icon-content'>
+                                            <MdOutlineRemoveShoppingCart className='Remove-shopping-cart'></MdOutlineRemoveShoppingCart>
+                                            <p className='shopping-icon-content-p'>Your cart is empty</p>
+                                            <a href='#home' className='shopping-icon-content-p-second'>Start shopping your favorite sustainable products!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="dropdown dropdown-hover">
+                            <span><img src={require('./icons/Icon - wishlist.svg')} className='favorite-icon' alt='b'></img></span>
+                            <div className='fake-size-drop-menu'>
+                                {/* <div className="dropdown-content">
+                                    <div className='contant-rows'>
+                                        <div className='content-first-line'>
+                                            <p>Women</p>
+                                            <a href='#home'>Tops</a>
+                                            <a href='#home'>Khitwear</a>
+                                            <a href='#home'>Coats & Jakets</a>
+                                            <a href='#home'>Dresses</a>
+                                            <a href='#home'>Skirts</a>
+                                        </div>
+                                    </div>
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="dropdown dropdown-hover">
+                            <span><img src={require('./icons/Icon - Account.svg')} className='profile-icon' alt='b'></img></span>
+                            <div className='fake-size-drop-menu profile-menu'>
+                                <div className="dropdown-content">
+                                    <div className='contant-rows'>
+                                        <div className='content-first-line profile-hover'>
+                                            <button type="button" className="btn-search">Login</button>
+                                            <p className="p-the-first">Don't have an account?</p>
+                                            {/* <a href='#home'>My Account</a> */}
+                                            <a href='#home' className='p-the-second'>Register</a>
+                                            <hr></hr>
+                                            <a href='#home'>My Account</a>
+                                            <a href='#home'>My Orders</a>
+                                            <a href='#home'>My Addresses</a>
+                                            <a href='#home'>MyTreety<span>Plus</span></a>
+                                            <a href='#home'>Help</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div> 
                 <hr></hr>
             </div>

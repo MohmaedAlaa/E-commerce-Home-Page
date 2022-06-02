@@ -1,11 +1,9 @@
 import React from 'react'
 import OurCharitiesPageTwo from './OurCharitiesPageTwo';
 import OurCharitiesPageOne from './OurCharitiesPageOne';
-import Item from "./Item";
 import 'react-multi-carousel/lib/styles.css'
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import Icon_arrow from './icons/Icon - arrow right white.svg';
-import ourCharitiesDataPageTwo from './OurCharitiesPageTwo'
+
 const OurCharitiesSection = ({ourCharitiesDataPageOne,ourCharitiesDataPageTwo,items}) => {
   const scroll_r=()=>{
     const best_seller_section=document.getElementById('OurCharities-section');

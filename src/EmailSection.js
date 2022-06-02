@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-const EmailSection = () => {
+const EmailSection = ({email,emailFn,sendEmailFn}) => {
     
     return (
         <div className='email-section' id='email-section'>
@@ -12,14 +12,15 @@ const EmailSection = () => {
                     <p>Subscribe today for free and we will send tips on how to live sustainably.</p>
 
                     <div className="inputWithIcon">
-                        <input type="email" id="email" name="email" placeholder='Enter You Email'></input>
+                        <input type="email" id="email" name="email" placeholder='Enter You Email' value={email} onChange={(event) => emailFn(event.target.value)}></input>
                         <FontAwesomeIcon className='email-icon' icon={faEnvelope}/>
                     </div>
-                    <button className="btn-search">Subscribe</button>
+                    <button className="btn-search" onClick={()=>sendEmailFn()}>Subscribe</button>
                 </div>
                 <div className='img-email-section'>
                     <img src={require('./icons/vector - dummy 2.svg')} alt='vector - dummy'></img>
                 </div>
+                {/* {console.log(email)} */}
             </div>
         </div>
         

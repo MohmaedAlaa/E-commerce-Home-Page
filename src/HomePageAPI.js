@@ -1,8 +1,5 @@
-import React, { Component, useEffect, useState } from "react"
-
 
 const api = "https://testing.mytreety.com"
-const api2= 'https://jsonplaceholder.typicode.com/todos'
 
 let token = localStorage.token
 if (!token)
@@ -12,9 +9,7 @@ const headers = {
   'App-Language': 'en',
   'Accept' : 'application/json'
 }
-const params = {
-  page: 2,
-}
+
 // get all products best seller
 export const getAllBestSeller = () =>
   fetch(`${api}/api/v2/products/best-seller`,{headers},{ mode: 'no-cors'})
@@ -33,18 +28,17 @@ fetch(`${api}/api/v2/charities?page=2`,{headers},{ mode: 'no-cors'})
   .then(res => res.json())
   .then(data => data)
     
-export const postSubscribe = (query) =>
+// post the mail  
+export const postSubscribe = (email) =>
   fetch(`${api}/api/v2/newsletter/subscribe`, {
     method: 'POST',
     headers: {
       ...headers,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ query })
+    body: JSON.stringify({email})
 }).then(res => res.json())
   .then(data => data)
-
-
 
 
 

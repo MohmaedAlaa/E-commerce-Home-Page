@@ -1,6 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faAngleRight,faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import BestSeller from './BestSeller';
 import Icon_arrow from './icons/Icon - arrow right.svg';
 const BestSellerSection = ({sidebarOpen,bestSellerProducts,onSetSidebarOpen,style}) => {

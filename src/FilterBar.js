@@ -1,10 +1,6 @@
 import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown'
 import { MultiSelect } from "react-multi-select-component";
-import xtype from 'xtypejs'
-import { string } from 'prop-types';
+
 
 function FilterBar () {
 

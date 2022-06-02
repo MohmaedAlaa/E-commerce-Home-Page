@@ -1,10 +1,4 @@
-import React, { useRef ,Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
-import {usePopup, DialogType} from "react-custom-popup";
-import Popup from 'reactjs-popup';
-import Carousel from "react-elastic-carousel";
-import Item from "./Item";
+import React, {Component} from "react";
 import App from "./popup";
 
 
@@ -13,11 +7,10 @@ class OurCharitiesPageOne extends Component {
 
     render (){
         const {data} = this.props;
-        {console.log(data.data)}
         return (
             
-            <div id='OurCharities-section'>
-                <div className="container-OurCharities" >
+            <div id='OurCharities-section' key={data.id}>
+                <div className="container-OurCharities">
                     <div className="OurCharities-content">
                         <div className="OurCharities-content-overlay"></div> 
                         <img className="OurCharities-content-image"  src={`https://testing.mytreety.com/${data.image}`} alt='img - charity'></img>
