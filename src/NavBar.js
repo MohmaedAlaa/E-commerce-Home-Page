@@ -1,14 +1,12 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
-import { BsGlobe } from "react-icons/bs";
+
 
 const Navbar = () => {
 
     return (
         <div>
             <div className="navBar" id='naBar'>
-                <p>Free shopping in all products!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 days refund period</p>
+                <p>Free shipping in all products!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 days refund period</p>
                 <div className='navBottons'>
                     <button>
                         <a href='/#' className='mytreetyPlus'>Mytreety <span>Plus</span></a>

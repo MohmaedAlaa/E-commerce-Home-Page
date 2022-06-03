@@ -1,44 +1,60 @@
 import {BrowserRouter,Route} from 'react-router-dom';
-import React, {Component , useRef} from 'react'
+import React, {Component} from 'react'
 import './App.css'
 // import FilterBar from './FilterBar'
 import Navbar from './NavBar';
 import SearchSection from './SearchSection';
 import SalesSection from './SalesSection';
 // import CookiesBar from './CookiesBar';
-import TopRanked from './TopRanked';
 import Categories from './Categories';
-import OurCharities from './OurCharities';
 import HowItWorks from './HowItWorks';
-import BestSeller from './BestSeller';
 import EmailSection from './EmailSection';
 import Footer from './Footer';
 import * as HomePageAPI from './HomePageAPI';
-import App from './HomePageAPI';
 import BestSellerSection from './BestSellerSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faAngleRight,faCartShopping} from '@fortawesome/free-solid-svg-icons';
+import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import TopRankedSection from './TopRankedSection';
 import OurCharitiesSection from './OurCharitiesSection';
+
 class MytreetyApp extends Component {
   state = {
     bestSellerProducts : [],
-    ourCharitiesData : [],
+    ourCharitiesDataPageOne : [],
+    ourCharitiesDataPageTwo : [],
     query : '',
     sidebarOpen: true,
-      items: [
-        {id: 1, title: 'item #1'},
-        {id: 2, title: 'item #2'},
-        {id: 3, title: 'item #3'},
-        {id: 4, title: 'item #4'},
-        {id: 5, title: 'item #5'}
-      ],
+    email: ''
   }
   searchedProductsFn = async(query) => {
-    //make query clear before using it in the searching
+    // make query clear before using it in the searching
     this.setState(() => ({
       query: query.replaceAll("^[ \"]+|[ \"]+$", "")
     }))
+  }
+  emailFn = async(email) => {
+    //make mail clear before using it in the searching
+    this.setState(() => ({
+      email: email.replaceAll("^[ \"]+|[ \"]+$", "")
+    }))
+  }
+  sendEmailFn = async(email) => {
+    // if(email){
+    //   HomePageAPI.postSubscribe(email)
+    //   console.log(email)
+    // }
+    // else{
+    //   HomePageAPI.postSubscribe('There is an error')
+    //   console.log('There is an error')
+    // }
+    try {
+      HomePageAPI.postSubscribe(email)
+      console.log(email)
+    }
+    catch(err) {
+      HomePageAPI.postSubscribe(err)
+      console.log(err)
+    }
   }
   componentDidMount(){
     HomePageAPI.getAllBestSeller().then((bestSellerProducts)=>{
@@ -46,11 +62,21 @@ class MytreetyApp extends Component {
        bestSellerProducts
       }))
     })
-    HomePageAPI.getAllCharities().then((ourCharitiesData)=>{
+    HomePageAPI.getAllCharitiesPageOne().then((ourCharitiesDataPageOne)=>{
       this.setState(()=>({
-       ourCharitiesData
+       ourCharitiesDataPageOne
       }))
     })
+    HomePageAPI.getAllCharitiesPageTwo().then((ourCharitiesDataPageTwo )=>{
+      this.setState(()=>({
+       ourCharitiesDataPageTwo 
+      }))
+    })
+    HomePageAPI.getAllCharitiesPageTwo().then((ourCharitiesDataPageTwo )=>{
+      this.setState(()=>({
+       ourCharitiesDataPageTwo 
+      }))
+    })  
   }
   style = {
     root: {
@@ -79,8 +105,8 @@ class MytreetyApp extends Component {
     }
   };
   render() {
-    const {query,bestSellerProducts,ourCharitiesData,items} = this.state
-    const {searchedProductsFn,style} = this
+    const {query,bestSellerProducts,ourCharitiesDataPageOne,ourCharitiesDataPageTwo,email} = this.state
+    const {searchedProductsFn,emailFn,sendEmailFn,style} = this
     return (
 
       <div className="app">
@@ -95,7 +121,7 @@ class MytreetyApp extends Component {
             <SalesSection></SalesSection>
 
             <div className="section-header">
-                <h1>Top Top Ranked Sustainable products</h1>
+                <h1>Top Ranked Sustainable products</h1>
                 <a href='#home'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
             </div>
             <TopRankedSection
@@ -106,17 +132,17 @@ class MytreetyApp extends Component {
             <Categories></Categories>
 
             <div className="section-header OurCharities-section-header">
-                <h1>Our charities</h1>
+                <h1>Our Charities</h1>
                 <a href='#home'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
             </div>
             <OurCharitiesSection
-            ourCharitiesData={ourCharitiesData}
-            items={items}
+            ourCharitiesDataPageOne={ourCharitiesDataPageOne}
+            ourCharitiesDataPageTwo ={ourCharitiesDataPageTwo }
             ></OurCharitiesSection>
 
-            {/* <HowItWorks></HowItWorks> */}
+            <HowItWorks></HowItWorks>
 
-            <div className="section-header BestSeller-header">
+            <div className="section-header BestSeller-section-header">
               <h1>Best Seller</h1>
               <a href='#home'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
             </div>
@@ -124,7 +150,13 @@ class MytreetyApp extends Component {
             bestSellerProducts={bestSellerProducts}
             style={style}
             ></BestSellerSection>
-            <EmailSection></EmailSection>
+
+            <EmailSection 
+            email={email}
+            emailFn={emailFn}
+            sendEmailFn={sendEmailFn}
+            ></EmailSection>
+
             <Footer></Footer>
           </div>
           }
