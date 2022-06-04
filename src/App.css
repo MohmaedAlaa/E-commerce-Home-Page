@@ -65,6 +65,7 @@ body {
   text-decoration: none;
   font: normal normal 600 0.875em/1.0625em Urbanist;
   color: #232323;
+  background-color: #F9F9F9;
 }
 .mytreetyPlus span{
   color: orange;
@@ -148,20 +149,21 @@ display:inline-block !important;
 }
 
 .search-inputWithIcon input[type="text"] {
-  padding-left: 2.5em;
+  padding-left: 4em;
 }
 .search-inputWithIcon .email-icon {
   position: absolute;
-  left: 0;
-  bottom: 1em;
+  left: 0.5em;
+  bottom: 1.15em;
   color: #aaa;
   transition: 0.3s;
 }
-
-.search-inputWithIcon input[type="text"]:focus+.email-icon {
+/* .search-inputWithIcon input[type="text"]:focus+.email-icon {
   color: orange;
-}
+} */
+/* .search-inputWithIcon input[type="text"]:focus+.search-menu{
 
+} */
 .search-menu{
   /* display: none; */
   position: absolute;
@@ -181,10 +183,23 @@ display:inline-block !important;
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: .75;
-  left: 0;
+  opacity: 0.75;
   top :0;
   background-color: black;
+  z-index: 999em !important;
+  } */
+  /* #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
   } */
 .fake-size-drop-menu{
   height: 3.15vw;
@@ -244,16 +259,14 @@ display:inline-block !important;
   border: none;
 }
 .search-section-dropdown .search-section-header{
-  color: gray;
+  color: #686868;
+  font: normal normal medium 0.75em/0.875em Urbanist;
   padding-left: 1.5em ;
 }
-.sustainability-ranking{
-  font-size: 1.1em;
+.sustainability-ranking,.search-section-p{
+  color: #232323;
+  font: normal normal medium 0.875em/1.0625em Urbanist;
   padding: 0em 0em 0em .6em;
-}
-.search-section-p{
-  font-size: 1.1em;
-  padding: 1em 0em 0em .6em;
 }
 .search-bar:focus {
   outline: none;
@@ -295,11 +308,19 @@ display:inline-block !important;
   border-radius: .4em;
 }
 .dropdown-item{
-  color: gray;
+  color: #686868;
+  font: normal normal medium 0.75em/0.875 Urbanist;
+  transition: 0.4s;
 }
+.dropdown-item:hover{
+  color: black;
+  background-color: #A0D6D4;
+  transform: scale(0.95);
+}
+.bt
 .dropdown-item:focus{
   color: black;
-  background-color: white;
+  /* background-color: white; */
 }
 .btn-search{
   height: 3.15vw;
@@ -560,7 +581,6 @@ hr{
 .sustainability-header{
   color: #232323;
   font: normal normal medium 1em/1.1875em Urbanist;
-
 }
 .Sustainability-dropdown-content .dropdown-content .content-first-line .sustainability-header{
   margin-bottom: -5em;
@@ -571,10 +591,10 @@ hr{
 }
 .dropdown-content .section-header {
   margin-top: 3em !important;
-  margin-left: -9em !important;
+  margin-left: -16em !important;
   font: normal normal bold 1em/1.1875em Urbanist;
 }
-.dropdown-content .section-header span:hover{
+.dropdown-content .section-header a:hover{
   color: orange;
 }
                                                          /* sales section */
@@ -593,11 +613,26 @@ hr{
   width: 54vw;
   height: 31em;
   border-radius: 0.5em;
-}        
+}
 .text-area{
   width: 18em;
-  margin: 5em 5em 5em 5em;
+  margin: 5em 3em 0 3em;
 }
+.first-sales-Section .text-area h1{
+  font: normal normal bold 2.5em/1.0125em Urbanist;
+} 
+.first-sales-Section .text-area p{
+  font: normal normal normal 1.1em/1.25em Urbanist;
+}   
+.first-sales-Section .text-area h4{
+  font: normal normal bold 1em/1.0125em Urbanist;
+}  
+.second-sales-Section .text-area h1{
+  font: normal normal bold 2.5em/1.0125em Urbanist;
+} 
+.second-sales-Section .text-area h4{
+  font: normal normal bold 1em/1.0125em Urbanist;
+}  
 .second-sales-Section{  
   display: flex;
   flex-direction: column;
@@ -630,20 +665,18 @@ hr{
                                                           /* TopRanked */
                                                           
 .section-header{
-  color: #232323;
-  margin: 3em 1em 1em 2em;
+  margin: 4em 0 0 5em;
   display: flex;
   flex-direction: row;
-  font: normal normal bold 2.5em/3em Urbanist;
 }
 .section-header h1{
-  font-weight:bold;
+  color: #232323;
+  font: normal normal bold 2.5em Urbanist;
 }
 .section-header a{
- /* font-size: 1.5em; */
  color: #3D897A;
- margin-left: 35Vw;
- font: normal normal bold .75em/1.8125em Urbanist
+ margin-left: 40Vw;
+ font: normal normal bold 1.5em Urbanist
 }
 .section-header a:hover{
   text-decoration: none;
@@ -651,10 +684,10 @@ hr{
  }
 .section-header span{
   transition: .4s;
-  margin: 1em;
+  margin: 0.5em;
 }
 .section-header span:hover{
-  margin-right: 2em;
+  margin-right: 1em;
 }
 .container{
   display: flex;
@@ -881,13 +914,13 @@ label img {
 
                                                           /* categories */
 .categories-section-header{
-  margin-top: 6em;
+  margin-bottom: 1.5em;
 }                                                
 .categories-section-header h1{
   padding-right: 16.75vw;
 }                                                          
 .categories-container{
-  margin-left: 5em;  
+  margin-left: 4.5em;  
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -934,7 +967,8 @@ label img {
 
                                                         /* our charities */
 .OurCharities-section-header{
-  margin-top: 6em;
+  margin-bottom: 2em;
+  margin-top: 7em;
 }   
 .OurCharities-section-header h1{
   margin-right: 23.5vw;
@@ -1097,17 +1131,18 @@ color: #3D897A;
                                                          /* how it works */
 .HowItWorks-container h1{
   text-align: center;
-  margin-top: 3vh;
-  font-weight: bold;
+  margin-top: 3em;
+  /* font-weight: bold; */
+  color: #232323;
+  font: normal normal bold 2.5em/3em Urbanist;
 }
 .HowItWorks-container .backGround{
   position: absolute;
-  padding: 20em;
   width: 100%;
   z-index: 1;
 }
 .HowItWorks {
-  margin: 3vw 7vw 0 7vw;
+  margin: 0 7em;
   background-image: url('./icons//vector\ -\ steps.svg');
   height: 80em;
   width: 70em;
@@ -1196,7 +1231,6 @@ color: #3D897A;
 }
 .caver-best-seller-section,.caver-OurCharities-section{
   position: relative; 
-  
 }
 .caver-OurCharities-section-page-two{
   display: flex;
@@ -1239,18 +1273,12 @@ color: #3D897A;
 .scroll-left img{
   transform: rotate(180deg);
 }
-
-
 .best-seller-section::-webkit-scrollbar,
 .OurCharities-section::-webkit-scrollbar{
   -webkit-appearance:none;
 }
-
-
-
 .topRanked-section-container{
   margin: 0 2em;
-  /* overflow-x: auto; */
 }      
                                                          /* e-mail section*/
 .email-section-container{
@@ -1771,7 +1799,8 @@ color: #3D897A;
     margin-bottom: -3vw;
   }
   .second-sales-Section .text-area h1{
-    font-size: 3.5vw;
+    font-size: 4vw;
+    width: 14vw;
     margin-top: 5vw;
     margin-bottom: -3vw;
   }
@@ -1788,18 +1817,13 @@ color: #3D897A;
     margin: 0 -10vw 0 5vw;
   }
   .section-header h1{
-    font-size: 1.25rem;
-    width: 106vw;
-    margin: 0;
-    padding: 0;
+    font-size: 1rem;
+    width: 70vw;
   }
   .section-header a{
-    margin-right: 0em;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
-    width: 50vw;
-    margin-right: 11vw;
+    font-size: 0.75rem;
+    margin: 0 0 0 20vw;
+    width: 41vw;
   }
   .best-seller-card-section{
     margin-left: -12vw;
@@ -1818,7 +1842,7 @@ color: #3D897A;
   .categories-first-row div  a,.categories-second-row div a{
     font-size: 4vw;
     margin: 0 0 10vw -19vw !important;
-    padding: 10vw 10vw 10vw 10vw !important;
+    padding: 10vw 10vw 10vw 10vw;
   } 
 }   
 
@@ -1833,4 +1857,75 @@ color: #3D897A;
 /* .Sustainability-dropdown-content .fake-size-drop-menu {
   padding-left: 41vw;
   width: 55em;
+} */
+
+
+
+/* .searchInputs {
+  margin-top: 105px;
+  display: flex;
+}
+
+.search input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  height: 30px;
+  width: 300px;
+}
+
+.searchIcon {
+  height: 60px;
+  width: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+.dataResult {
+  margin-top: 5px;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: lightgrey;
+}
+
+#clearBtn {
+  cursor: pointer;
 } */
