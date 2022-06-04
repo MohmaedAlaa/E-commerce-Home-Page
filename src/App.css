@@ -2319,90 +2319,225 @@ label img {
 }
 
 
-@media screen and (max-width: 640px){
-  .OurCharities-container{
+@media screen and (max-width: 640px) {
+  .OurCharities-container {
     display: block;
     width: 100%;
   }
-  .categories-container{
+
+  .categories-container {
     overflow-x: auto;
   }
-  .btn-scroll,.footer-section-top-five{
-  display: none;  }
-  .img-email-section{
-  order: 1;
+
+  .btn-scroll,
+  .footer-section-top-five {
+    display: none;
+  }
+
+  .img-email-section {
+    order: 1;
     /* width: 100%; */
   }
-  .email-section-container{
-    flex-direction: column!important;
-    width: 100%!important;
-    height: auto!important;
-  }.email-section img {
-    width: 100%!important;
-    height: auto!important;
+
+  .email-section-container {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
   }
-  .input-area{
+
+  .email-section img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .input-area {
     order: 2;
-    width: auto!important;
+    width: auto !important;
   }
-  .btn-search{
-    position: relative!important;
-    margin:0 auto  !important ;
+
+  .btn-search {
+    position: relative !important;
+    margin: 0 auto !important;
     padding: 1em 2em;
     height: 10vw;
   }
 
 
-  .search-section{
+  .search-section {
     width: 100%;
-}
-.search-inputWithIcon input[type="text"] {  
+  }
+
+  .search-inputWithIcon input[type="text"] {
     height: 10vw !important;
     width: 60vw !important;
     border-radius: 2.25vw !important;
     margin-top: 0;
   }
+
   .search-inputWithIcon {
     margin-left: 5vw !important;
-    margin-top:0 !important;
+    margin-top: 0 !important;
     padding: 0 auto;
   }
+
   .search-inputWithIcon .email-icon {
     top: 1 !important;
   }
-  .search-section-icons{
+
+  .search-section-icons {
     display: none;
   }
-  .search-section-icons-mobile{
+
+  .search-section-icons-mobile {
     display: block;
     width: 15%;
     margin: 8vw 0 0 30vw;
   }
-    .navBar,.search-section-dropdown,.hover-section,.search-section hr{
+
+  .navBar,
+  .search-section-dropdown,
+  .hover-section,
+  .search-section hr {
     display: none;
   }
-  .search-section-background{
+
+  .search-section-background {
     box-shadow: none;
   }
-  .search-section img:nth-child(1){
+
+  .search-section img:nth-child(1) {
     margin: 3vw 0 0 3vw;
     width: 173.77px;
     height: 35%;
-  }.caver-OurCharities-section-page-one{
-     overflow-x: auto;
   }
+
+  .caver-OurCharities-section-page-one {
+    overflow-x: auto;
+  }
+
   .HowItWorks {
+    position: relative;
     /* padding:3em auto; */
-    margin: 0 auto;
-    background-image: url('./icons//vector\ -\ steps.svg');
-    /* height: 72em; */
-    width: 80%;
-    background-position:right;
+    margin: 2em auto;
+    background-image: url('./icons//vector - steps-smallscreen.svg');
+    height: 80em;
+    width: 95%;
+    object-fit: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    /* background-size: 50em; */
+    background-size: 182.34px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .HowItWorks-line-one {
+    width: 48%;
+    height: 100%;
+    margin-right: auto !important;
+  }
+
+  .HowItWorks-line-two {
+    width: 48%;
+    margin: auto 0 auto auto;
+    height: 80%;
+  }
+
+  .HowItWorks-all-one,
+  .HowItWorks-all-two {
+    margin: 0;
+    margin-bottom: auto;
+    width: 13.5em;
+    height: 24em;
+  }
+
+  .HowItWorks-all-one *,
+  .HowItWorks-all-five *,
+  .HowItWorks-all-two *,
+  .HowItWorks-all-four * {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .HowItWorks-all-five,
+  .HowItWorks-all-four {
+    margin: 0;
+    margin-top: auto;
+    width: 13.5em;
+    height: 24em;
+
+  }
+
+
+
+  .HowItWorks img,
+  .HowItWorks-content * {
+    width: 100% !important;
+
+
+  }
+
+  .HowItWorks-content p {
+    height: max-content;
+
+  }
+
+  .HowItWorks-content {
+
+    width: 100% !important;
+
+    height: 15em;
+    padding: 1em;
+    margin: 1em 0 0 0;
+
+  }
+
+  .HowItWorks-all-three {
+    width: 13.5em;
+    height: 24em;
+  }
+
+  .HowItWorks-all-one img:nth-child(2),
+  .HowItWorks-all-five img:nth-child(2),
+  .HowItWorks-all-two img:nth-child(2) {
+    display: none;
+  }
+
+  .HowItWorks-line-three {
+    position: absolute;
+    top: -5%;
+    width: 50%;
+    /* display: none; */
+  }
+
+  .img-email-section img {
+    margin: auto;
+  }
+
+  .email-section-container {
+    margin: 3em auto !important;
+    width: 85% !important;
+  }
+
+  .email-section h1 {
+    font-size: 1rem;
+  }
+
+  .btn-Subscribe {
+    position: static;
+    margin-top: 16px !important;
+    margin-left: 0;
+    padding: 0.625em 1.25em;
+    border-radius: 0.625em;
+  }
+
+  .HowItWorks-line-two * {
+    margin-left: auto;
+  }
+
+  .HowItWorks-all-four {
+    margin-bottom: 80% !important;
   }
 }
 

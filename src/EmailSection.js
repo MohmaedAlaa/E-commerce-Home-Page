@@ -15,7 +15,7 @@ const EmailSection = ({email,emailFn,sendEmailFn}) => {
                         <input type="email" id="email" name="email" placeholder='Enter You Email' value={email} onChange={(event) => emailFn(event.target.value)}></input>
                         <FontAwesomeIcon className='email-icon' icon={faEnvelope}/>
                     </div>
-                    <button className="btn-search" onClick={()=>sendEmailFn()}>Subscribe</button>
+                    <button className="btn-search btn-Subscribe" onClick={()=>sendEmailFn()}>Subscribe</button>
                 </div>
                 <div className='img-email-section'>
                     <img src={require('./icons/vector - dummy 2.svg')} alt='vector - dummy'></img>
