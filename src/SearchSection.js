@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown ,faClockRotateLeft ,faMagnifyingGlass ,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import {MdOutlineRemoveShoppingCart} from   'react-icons/md'
+// import './SearchSection.css'
+import Overlay from 'react-bootstrap/Overlay'
+// import BookData from "./Data.json";
+// import SearchBar from "./SearchBar";
+
 const SearchSection = ({query,searchedProductsFn}) => {
 
     // const [color,setColor]=useState('');
@@ -11,10 +16,17 @@ const SearchSection = ({query,searchedProductsFn}) => {
     //     console.log(e);
     //     setColor(`${e} \t`);
     // }
+    const restQuery =()=>{
+        // this.props.query = null;
+        // console.log(this.props.query)
+    }
+    const searchInput = React.useRef(null)
+    const searchMenu = React.useRef(null)
+
     return (
         <div className='search-section-background' id='search-section'>
             {/* background of the search menu */}
-            {query.length?<div className='fake-size-search-menu'></div>:''}
+            {query.length?<div id="overlay"></div>:''}
 
             <div className='search-section'>
             <img src={require('./Imgs/b.svg')} alt='b'></img>
@@ -22,65 +34,71 @@ const SearchSection = ({query,searchedProductsFn}) => {
                 <img src={require('./icons/Icon - Account.svg')} className='profile-icon-mobile' alt='b'></img>
                 <img src={require('./icons/Icon - cart.svg')} className="shopping-icon-mobile" alt='b'></img>
             </div>
-                <div>
-                    {/* catch the query and pass it to the searchedBooksFn to search for the books by it */}
-                    <div className="search-inputWithIcon">
-                        <input type="text" id="text" name="text" 
-                        placeholder='Search all products or categories' 
-                        value={query}
-                        onChange={(event) => searchedProductsFn(event.target.value)}
-                        ></input>
-                        <FontAwesomeIcon className='email-icon' icon={faMagnifyingGlass}/>
-                    </div>  
-                    {/* <div className="search-bar">
-                        <input type="text"
-                        placeholder=" Search all products or categories" 
-                        className="search-input"
-                        value={query}
-                        onChange={(event) => searchedProductsFn(event.target.value)}
-                        />
-                        <FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass}/>
-                    </div> */}
-    
-                    {
-                        query.length?
-                        <div className='search-menu'>
-                            <div className='search-menu-content'>
-                                <p>Recent</p>
-                                <div className='row'>
-                                    <a href='#home'><FontAwesomeIcon className='recent-icon' icon={faClockRotateLeft}/> &nbsp; snack dog</a>
-                                    <button>Remove</button>
-                                </div>
-                                <div className='row'>
-                                    <a href='#home#home'><FontAwesomeIcon className='recent-icon' icon={faClockRotateLeft}/> &nbsp; snack dog</a>
-                                    <button>Remove</button>
-                                </div>
-                                <div className='row'>
-                                    <a href='#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faClockRotateLeft}/> &nbsp; snack dog</a>
-                                    <button>Remove</button>
-                                </div>
-                                <p>Suggestions</p>
-                                <div>
-                                    <a href='#home#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
-                                </div>
-                                <div>
-                                    <a href='#home#home#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
-                                </div>
-                                <div>
-                                    <a href='#home#home#home#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
-                                </div>
-                                <p>products & Brands</p>
-                                <div>
-                                    <a href='#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
-                                </div>
-                                <div>
-                                    <a href='#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
-                                </div>
+            <div>
+                {/* <div className="App">
+                    <SearchBar placeholder="Search all products or categories..." data={BookData} />
+                </div> */}
+                {/* catch the query and pass it to the searchedBooksFn to search for the books by it */}
+                <div className="search-inputWithIcon">
+                    <input type="text" id="text" name="text" 
+                    placeholder='Search all products or categories' 
+                    value={query}
+                    onChange={(event) => searchedProductsFn(event.target.value)}
+                    ref={searchInput}
+                    ></input>
+                    {/* <FontAwesomeIcon className='email-icon' icon={faMagnifyingGlass}/> */}
+                    <img src={require('./icons/Icon - search.svg')} className='email-icon' alt='b'></img>
+                </div>  
+                {/* <div className="search-bar">
+                    <input type="text"
+                    placeholder=" Search all products or categories" 
+                    className="search-input"
+                    value={query}
+                    onChange={(event) => searchedProductsFn(event.target.value)}
+                    />
+                    <FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass}/>
+                </div> */}
+
+                {   
+                     query.length >=1 &&document.activeElement === searchInput.current?
+                   
+                    <div className='search-menu' ref={searchMenu}>
+                        <div className='search-menu-content'>
+                            <p>Recent</p>
+                            <div className='row'>
+                                <a href='#home'><FontAwesomeIcon className='recent-icon' icon={faClockRotateLeft}/> &nbsp; snack dog</a>
+                                <button>Remove</button>
                             </div>
-                            <button className='view-all'> <span> View All Result </span> <FontAwesomeIcon icon={faAngleRight}/> </button>
+                            <div className='row'>
+                                <a href='#home#home'><FontAwesomeIcon className='recent-icon' icon={faClockRotateLeft}/> &nbsp; snack dog</a>
+                                <button>Remove</button>
+                            </div>
+                            <div className='row'>
+                                <a href='#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faClockRotateLeft}/> &nbsp; snack dog</a>
+                                <button>Remove</button>
+                            </div>
+                            <p>Suggestions</p>
+                            <div>
+                                <a href='#home#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
+                            </div>
+                            <div>
+                                <a href='#home#home#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
+                            </div>
+                            <div>
+                                <a href='#home#home#home#home#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
+                            </div>
+                            <p>products & Brands</p>
+                            <div>
+                                <a href='#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
+                            </div>
+                            <div>
+                                <a href='#home#home'><FontAwesomeIcon className='recent-icon' icon={faMagnifyingGlass}/> &nbsp; snack dog</a>
+                            </div>
                         </div>
-                        :''
-                    }
+                        <button className='view-all'> <span> View All Result </span> <FontAwesomeIcon icon={faAngleRight}/> </button>
+                    </div>
+                    :''
+                }
                                  
                 </div>
                 <div >
