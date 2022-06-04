@@ -393,10 +393,10 @@ body {
   display: none;
 }
 
-.search-section-icons .hover-section {
+/* .search-section-icons .hover-section {
   margin-top: 1.25em;
   margin-left: 4.25em;
-}
+} */
 
 .search-section-icons .hover-section div {
   margin: 0.5em -0.3em 0 -0.3em;
