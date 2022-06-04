@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import TopRankedSection from './TopRankedSection';
 import OurCharitiesSection from './OurCharitiesSection';
+import MobileNav from './MobileNav';
 
 class MytreetyApp extends Component {
   state = {
@@ -129,6 +130,10 @@ class MytreetyApp extends Component {
             style={style}
             ></TopRankedSection>
 
+            <div className="section-header categories-section-header">
+                <h1>Browse Categories</h1>
+                <a href='#top'> <span>See All</span> <FontAwesomeIcon icon={faAngleRight}/> </a>
+            </div>
             <Categories></Categories>
 
             <div className="section-header OurCharities-section-header">
@@ -161,6 +166,10 @@ class MytreetyApp extends Component {
           </div>
           }
           />
+
+          <Route path='/list' render={()=>
+            <MobileNav></MobileNav>
+          }/>
           </BrowserRouter>
       </div>
     )

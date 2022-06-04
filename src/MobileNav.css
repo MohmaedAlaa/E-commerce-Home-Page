@@ -1,0 +1,84 @@
+.mobile-nav-section{
+    margin: 3vw 7vw;
+}
+.mobile-nav-section hr{
+    width: 100%;
+    margin: 3vw 0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.categories-title{
+    margin-left: 25vw;
+    color: #232323;
+    font: normal normal bold 1.125em/2.125em Urbanist;
+}
+.mobile-nav-categories-container a {
+    font-size: 4vw;
+    margin: 1vw;
+    padding: 13vw;
+    display: flex;
+    justify-content: center;
+}
+.mobile-nav-categories-container div{
+    width: 40vw;
+    border-radius: 2.5vw;
+    margin: 1vw;
+}
+.mobile-nav-categories-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.mobile-nav-categories-first-row{
+    margin-right: 2vw;
+}
+.links-part{
+    margin: 5vw 1vw 0 3vw;
+}
+.links-part a{
+    color: #232323;
+    font: normal normal 600 1em/1.1875em Urbanist;
+}
+.links-part a:hover{
+    color: #232323;
+    text-decoration: none;
+}
+.links-part a span{
+    color: orange;
+}
+.mobile-nav-categories-first-row div:nth-child(1) {
+    background-color: orange;
+  }
+  
+  .mobile-nav-categories-first-row div:nth-child(2) {
+    background-color: #F5F2D0;
+  }
+  
+  .mobile-nav-categories-first-row div:nth-child(3) {
+    background-color: #3D897A;
+  }
+  
+  .mobile-nav-categories-second-row div:nth-child(1) {
+    background-color: #A0D6D4;
+  }
+  
+  .mobile-nav-categories-second-row div:nth-child(2) {
+    background-color: #1E443D;
+  }
+  
+  .mobile-nav-categories-second-row div:nth-child(3) {
+    background-color: #F3D030;
+  }
+ .mobile-nav-categories-first-row div:nth-child(1) a,
+ .mobile-nav-categories-first-row div:nth-child(3) a,
+ .mobile-nav-categories-second-row div:nth-child(2) a {
+    color: white;
+ }
+
+ .mobile-nav-categories-second-row div:nth-child(1) a,
+ .mobile-nav-categories-second-row div:nth-child(3) a,
+ .mobile-nav-categories-first-row div:nth-child(2) a {
+    color: black;
+ }

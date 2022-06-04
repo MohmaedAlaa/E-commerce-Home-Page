@@ -4,8 +4,10 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown ,faClockRotateLeft ,faMagnifyingGlass ,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import {MdOutlineRemoveShoppingCart} from   'react-icons/md'
+import {Link} from 'react-router-dom';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 // import './SearchSection.css'
-import Overlay from 'react-bootstrap/Overlay'
+// import Overlay from 'react-bootstrap/Overlay'
 // import BookData from "./Data.json";
 // import SearchBar from "./SearchBar";
 
@@ -31,8 +33,15 @@ const SearchSection = ({query,searchedProductsFn}) => {
             <div className='search-section'>
             <img src={require('./Imgs/b.svg')} alt='b'></img>
             <div className='search-section-icons-mobile'>
-                <img src={require('./icons/Icon - Account.svg')} className='profile-icon-mobile' alt='b'></img>
-                <img src={require('./icons/Icon - cart.svg')} className="shopping-icon-mobile" alt='b'></img>
+                <img src={require('./icons/Icon - cart.svg')} className="mobile-icons" alt='b'></img>
+                <img src={require('./icons/Icon - Account.svg')} className='mobile-icons middle' alt='b'></img>
+                <Link className="list" to={{ pathname: '/list'}}>
+                    <img src={require('./icons/Icon - Account.svg')} className='mobile-icons' alt='b'></img>
+                </Link>
+                {/* <a className='list'>
+                    <img src={require('./icons/Icon - Account.svg')} className='mobile-icons' alt='b'></img>
+                </a> */}
+                {/* <BsList className='list'></BsList> */}
             </div>
             <div>
                 {/* <div className="App">
