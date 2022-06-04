@@ -150,6 +150,7 @@ display:inline-block !important;
 .search-inputWithIcon input[type="text"] {
   padding-left: 2.5em;
 }
+
 .search-inputWithIcon .email-icon {
   position: absolute;
   left: 0;
@@ -317,7 +318,6 @@ display:inline-block !important;
 
 .search-section-icons-mobile{
   display: none;
-
 }
 .search-section-icons .hover-section{
   margin-top: 1.25em ;
@@ -1185,6 +1185,7 @@ color: #3D897A;
 }   
 .BestSeller-section-header{
   margin-top: 0;
+  padding: 5px 5%;
 }
 
 .best-seller-section{
@@ -1631,8 +1632,8 @@ color: #3D897A;
     margin: 1.15vw 0vw 1vw 2vw ;
   }
   .search-inputWithIcon input[type="text"] {
-    height: 3.15vw !important;
-    width: 44.5em !important;
+    height: 48px !important;
+    width: 622px !important;
   }
   .search-inputWithIcon {
     margin-top: 0.45em !important;
@@ -1660,7 +1661,7 @@ color: #3D897A;
   }
   .btn-search{
     height: 3.5vw;
-    padding: 0;
+    padding: 0;  
   }
   .search-inputWithIcon input[type="text"] {
     height: 3.5vw !important;
@@ -1687,26 +1688,26 @@ color: #3D897A;
   body{
     font-size: 12px;
   }
-  .navBar,.search-section-dropdown,.hover-section,.search-section hr{
+  /* .navBar,.search-section-dropdown,.hover-section,.search-section hr{
     display: none;
-  }
-  .search-section-background{
+  } */
+  /* .search-section-background{
     box-shadow: none;
   }
   .search-section img:nth-child(1){
-    margin: 5vw 0 0 5vw;
-    width: 35%;
+    margin: 3vw 0 0 3vw;
+    width: 173.77px;
     height: 35%;
+  } */
+  .btn-Subscribe{
+    position:static;
+    margin-top: 5px!important;
+    margin-left: 0;
+    
+   padding: 10px 20px ;
+    border-radius:10px;
   }
-  .btn-search{
-    /* position: absolute; */
-    margin-top: -1.5vw !important;
-    margin-left: 75vw;
-    height: 10vw;
-    width: 20vw;
-    border-radius: 2.25vw;
-  }
-  .search-inputWithIcon input[type="text"] {  
+  /* .search-inputWithIcon input[type="text"] {  
     height: 10vw !important;
     width: 69vw !important;
     border-radius: 2.25vw !important;
@@ -1714,18 +1715,18 @@ color: #3D897A;
   .search-inputWithIcon {
     margin-left: 5vw !important;
     margin-top: -3vw !important;
-  }
-  .search-inputWithIcon .email-icon {
+  } */
+  /* .search-inputWithIcon .email-icon {
     top: 1 !important;
   }
   .search-section-icons{
     display: none;
-  }
-  .search-section-icons-mobile{
+  } */
+  /* .search-section-icons-mobile{
     display: block;
     width: 15%;
     margin: 8vw 0 0 30vw;
-  }
+  } */
   .profile-icon-mobile{
     width: 68% !important;
     margin-top: 0 !important;
@@ -1785,7 +1786,8 @@ color: #3D897A;
     margin: 2vw -2vw 2vw 0;
   }
   .section-header{
-    margin: 0 -10vw 0 5vw;
+    margin: 0;
+    padding:0 0 0 5vw ;
   }
   .section-header h1{
     font-size: 1.25rem;
@@ -1801,12 +1803,15 @@ color: #3D897A;
     width: 50vw;
     margin-right: 11vw;
   }
-  .best-seller-card-section{
-    margin-left: -12vw;
-    margin-right: 12vw;
+  .best-seller-card-section{margin: auto 12;
+
   }
   .categories-container{
-    margin: 3vw;
+    padding: 3vw 5vw;
+    background: none;
+    margin-left: 0;
+  }.btn-search{
+       margin: 13px 0;
   }
   .categories-first-row div ,.categories-second-row div{
     margin: 0.75vw;
@@ -1820,6 +1825,149 @@ color: #3D897A;
     margin: 0 0 10vw -19vw !important;
     padding: 10vw 10vw 10vw 10vw !important;
   } 
+/*how-it-works for responsive */
+.categories-container{
+  overflow-x: auto;
+}.categories-container::-webkit-scrollbar{
+  -webkit-appearance:none;
+}
+
+  .HowItWorks-container h1{
+    text-align: center;
+    margin-top: 3vh;
+    font-weight: bold;
+  }
+  .HowItWorks-container .backGround{
+    position: absolute;
+    padding: 20em;
+    width: 100%;
+    z-index: 1;
+  }
+  .HowItWorks {
+    margin: 0 auto;
+    background-image: url('./icons//vector\ -\ steps.svg');
+    height: 72em;
+    width: 80%;
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size: 50em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .HowItWorks-line-one ,.HowItWorks-line-two,.HowItWorks-line-three{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .HowItWorks-all-one{
+    margin: 4em 0 0 2em;
+  }
+  .HowItWorks-all-one img:nth-child(2){
+    margin: 5em 0 0 1em;
+  }
+  .HowItWorks-all-two{
+    margin: 7em 0 0 3em;
+  }
+  .HowItWorks-all-two img:nth-child(2){
+    margin: 4.5em 0 0 1em;
+  }
+  .HowItWorks-all-three{
+    margin: 29em 0 0 0;
+  }
+  .HowItWorks-all-four{
+    margin: 6em 0 0 2em;
+  }
+  .HowItWorks-all-four img:nth-child(2){
+    margin: 8em 0 0 1em;
+  }
+  .HowItWorks-all-five{
+    margin: 12em 0 0 3em;
+  }
+  .HowItWorks-content{
+    border: 0.09em solid lightgray;
+    border-radius: 0.6em;
+    width: 18em;
+    height: 13em;
+    padding: 1em;
+    margin: 3em 0 0 0;
+    background-color: white;
+  }
+  .HowItWorks img{
+    width: 18em;
+  }
+  .HowItWorks-content h3{
+    color: #3D897A;
+    font: normal normal bold 1.25em/1.5em Urbanist;
+  }
+  .HowItWorks-content h4{
+    color: #232323;
+    font: normal normal bold 1.5em/1.8125em Urbanist;
+  }
+  .HowItWorks-content p{
+    color: #686868;
+    font: normal normal medium 1em/1.1875em Urbanist;
+  }
+  .HowItWorks-row{
+    display: flex;
+    flex-direction: row;
+  }
+  .HowItWorks-row img{
+    width: 2.5em;
+    height: 2.5em;
+  }
+  .email-section-container{
+    width: 90%;
+    height: auto;
+  }
+  .img-email-section img {
+    width: 80%;
+  }.best-seller-section{
+    padding: 0 10vw ;
+    background: none;
+  }
+  .search-inputWithIcon input[type="text"] {
+    height: 38px !important;
+    width: 400px !important;
+  }
+/* .search-section{width: 100%;
+} */
+.navBottons {
+  margin: 0;
+  margin-left: auto ;
+  padding-right: 85px;
+}
+.dropdown-toggle{
+  width:124px;
+  height: 38px !important;
+  margin: 13px 13px 13px 0;
+}
+.search-section img:nth-child(1) {
+  margin: 1em 1em 1em 4em;
+}
+
+
+.search-inputWithIcon {
+  margin-top: 10px;
+}
+
+.dropdown-hover-firstOne{
+
+}
+.sales-Section{
+  margin:0 0 0 2vw;
+}
+.dropdown-hover-firstOne {
+  margin: 0 ;
+}
+
+.hover-section{
+  justify-content: space-around;
+}
+.dropdown-hover{
+margin-left:0;
+}
 }   
 
 
