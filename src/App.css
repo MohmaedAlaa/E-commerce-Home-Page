@@ -150,6 +150,7 @@ display:inline-block !important;
 .search-inputWithIcon input[type="text"] {
   padding-left: 2.5em;
 }
+
 .search-inputWithIcon .email-icon {
   position: absolute;
   left: 0;
@@ -317,7 +318,6 @@ display:inline-block !important;
 
 .search-section-icons-mobile{
   display: none;
-
 }
 .search-section-icons .hover-section{
   margin-top: 1.25em ;
