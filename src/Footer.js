@@ -105,7 +105,7 @@ const Footer = () => {
             <a href="#home">General terms and conditions</a>
           </div>
         </div>
-        <hr className=""/>
+        <hr className="hr-footer"/>
         <div className="footer-section-bottom">
           <p className="hide-mobile-1">
             Buyer/Seller/Charities Policies <span>.</span> Privacy Policy{" "}
