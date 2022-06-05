@@ -2617,6 +2617,7 @@ flex:1;}
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
+    padding:20px 0 ;
  }
 .footer-section-top-mobile-left,.footer-section-top-mobile-right,.footer-show-mobile
 ,.footer-section-top-mobile-left a,.footer-section-top-mobile-right a
@@ -2650,9 +2651,12 @@ color: white; white-space: pre;
   flex-direction: column;
   margin: 0 5vw;
 }
+  .hr-footer{
+    display: none;
+  }.footer-section-bottom{
+    border-top: #ccc solid 1px ;
+  }
 }
-
-
 .footer-section-top-mobile,.footer-show-mobile,.footer-section-top-mobile-bottom{
   display: none;
 }
