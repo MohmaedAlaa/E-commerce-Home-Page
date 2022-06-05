@@ -2481,32 +2481,7 @@ label img {
     bottom: 0;
     margin-left: 15vw;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   .HowItWorks-line-one {
     width: 48%;
     height: 100%;
@@ -2605,7 +2580,7 @@ label img {
   .btn-Subscribe {
     position: static;
     margin-top: 16px !important;
-    margin-left: 0;
+    margin-left: 20vw !important;
     padding: 0.625em 1.25em;
     border-radius: 0.625em;
   }
@@ -2675,9 +2650,37 @@ color: white; white-space: pre;
   flex-direction: column;
   margin: 0 5vw;
 }
+}
+
+
 .footer-section-top-mobile,.footer-show-mobile,.footer-section-top-mobile-bottom{
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .Sustainability-dropdown-content .dropdown-content {
   padding-left: -20vw;
